@@ -1,0 +1,18 @@
+SampleGroup,GeneRatio,p.adjust,Count,Description,logp
+Zfp-up,45/628,1.33542E-17,45,ncRNA processing,16.87438098
+Zfp-up,22/628,1.36389E-06,22,rRNA processing,5.8652206
+Zfp-up,17/628,6.55683E-07,17,tRNA processing,6.183306024
+Zfp-up,32/628,5.58638E-06,32,mRNA processing,5.252869571
+Zfp-up,29/628,1.77879E-08,29,ribosome biogenesis,7.749875397
+Zfp-up,28/628,2.00893E-05,28,RNA splicing,4.697034968
+Zfp-up,27/615,2.07581E-06,27,ubiquitin-like protein ligase binding,5.682812527
+Zfp-up,26/615,2.07581E-06,26,ubiquitin protein ligase binding,5.682812527
+Zfp-up,24/628,5.31423E-06,24,"mRNA splicing, via spliceosome",5.274559863
+Zfp-up,20/628,0.047899421,20,regulation of DNA-binding transcription factor activity,1.31966974
+Dux-up,45/1416,8.82E-07,45,DNA-binding transcription repressor activity,6.054449256
+Dux-up,41/1408,0.005944684,41,urogenital system development,2.225871238
+Dux-up,42/1408,0.018121666,42,Wnt signaling pathway,1.74180189
+Dux-up,42/1408,0.018121666,42,cell-cell signaling by wnt,1.74180189
+Dux-up,45/1408,0.017760452,45,pattern specification process,1.750545987
+Dux-up,41/1416,0.030107421,41,channel activity,1.521326452
+Dux-up,39/1408,0.036305404,39,sensory system development,1.440028726

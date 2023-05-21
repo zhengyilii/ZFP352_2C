@@ -1,0 +1,32 @@
+library(magrittr)
+library(ggpubr)
+
+# load data
+load("./dux_tpm.RData")
+
+# retain expressed genes
+
+duxExpGene = apply(duxTpm, 1, function(x){sum(x>1) > 1}) %>% 
+  {names(.)[. == T]}
+
+# cv rank
+mycvRank = apply(duxTpm[duxExpGene, ], 1, function(x){sd(x)/mean(x)}) %>% 
+  {rank(. * -1, ties.method = "random")}
+
+# top 1000 most variable genes
+top1000Var = mycvRank[mycvRank <= 1000] %>% names()
+
+# PCA
+tmpmtx = duxTpm[top1000Var, ]
+
+npca = prcomp(t(tmpmtx), center = TRUE, scale. = TRUE)
+npca.dat = npca$x %>% data.frame()
+npca.dat$Time = rownames(npca.dat) %>% 
+  gsub(".*_(.*)", "\\1", ., perl = T)
+
+pdf(file = "dux_pca.pdf", width = 6, height = 4)
+ggscatter(npca.dat, "x" = "PC1", "y" = "PC2", "color" = "Time", palette = "aaas")+ 
+  xlab("PC1: 45% variance") +
+  ylab("PC2: 30% variance") +
+  theme(legend.position='right')
+dev.off()
