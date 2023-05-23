@@ -1,0 +1,1 @@
+bedtools fisher -a ZFPOE_R1_summits.bed -b mm10_TE_revised.bed -g mm10.genome
