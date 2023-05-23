@@ -1,0 +1,15 @@
+These codes should be run on linux:
+#get DNA sequence from chip bed files:#
+bedtools getfasta -fi mm10.fa -bed zfp_B1.bed -fo zfp_B1.fa
+
+Get jellyfish:
+wget https://github.com/gmarcais/Jellyfish/releases/download/v1.1.12/jellyfish-linux --user-agent="Mozilla/5.0 (X11;U;Linux i686;en-US;rv:1.9.0.3) Geco/2008092416 Firefox/3.0.3" --no-check-certificate
+mv jellyfish-linux jellyfish
+chmod +x jellyfish
+
+compute k-mer：
+jellyfish count -m 6 -t 10 -s 1G zfp_B1.fa
+jellyfish dump mer_counts.jf > kmer_count.fasta
+jellyfish dump  -c -t mer_counts.jf > kmer_count.tsv
+jellyfish stats mer_counts.jf
+jellyfish histo mer_counts.jf > kmer_hist.tsv
