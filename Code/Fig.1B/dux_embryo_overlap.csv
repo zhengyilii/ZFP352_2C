@@ -1,0 +1,9 @@
+dux,embryo,count,p_adjusted,logp
+Dux_cluster1,Zygote,87,0.002043643,2.689594968
+Dux_cluster1,Blastocyst,99,0.039577839,1.402547923
+Dux_cluster2,4C,118,2.34E-09,8.630784143
+Dux_cluster3,Midlate2C,307,5.14E-156,155.2890369
+Dux_cluster3,4C,75,0.004228011,2.373863891
+Dux_cluster4,Zygote,129,1.63E-07,6.787812396
+Dux_cluster5,Blastocyst,53,0.000140804,3.851385007
+Dux_cluster6,Blastocyst,103,0.014002885,1.853782478
